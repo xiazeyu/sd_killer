@@ -8,7 +8,7 @@ An application that prevent accidently shut down.
 Microsoft Windows
 
 # Usege - 使用方法
-** Enable c++11 **
+** Enable -c++11 **
 开启C++11编译
 Compile "main.cpp" and Run it.
 编译 "main.cpp" 并运行
