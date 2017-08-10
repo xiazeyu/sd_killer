@@ -1,4 +1,4 @@
-# Introduction
+# Introduction - 介绍
 
 An application that prevent accidently shut down.
 
@@ -25,7 +25,7 @@ Compile "main.cpp" and Run it.
 编译 "main.cpp" 并运行
 
 
-# Latest version
+# Latest version - 最新版本
 
 - ver 3.0
 
