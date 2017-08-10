@@ -4,7 +4,7 @@
 
 */
 
-#include <cstdio>
+// #include <cstdio>
 #include <cstdlib>
 #include <iostream>
 
@@ -21,37 +21,37 @@ struct ThreadItem {
 };
 
 void* ThreadFunction() {
-
+	
 	while(1){
-
+		
 		system("shutdown -a"); // Command Here!
-		// printf("from thread ID %d\n",std::this_thread::get_id());
-		// cout << "from thread ID " << std::this_thread::get_id() << endl;
+		cout<<"from thread ID "<<std::this_thread::get_id()<<endl;
+		
 	}
-
+	
 }
 
 int main(){
-
+	
 	// Get the amount of "processing units"
 	int n = std::thread::hardware_concurrency();
-
+	
 	// Create array of threads
 	vector<ThreadItem> threadlist;
 	threadlist.resize(n);
-
+	
 	// Spawn a thread for each core
 	for(int i = 0;i < n ;i++) {
 		threadlist[i].worker = thread(ThreadFunction);
 	}
-
-
+	
+	
 	// Wait for them all to finish
 	for(int i = 0;i < n;i++) {
 		threadlist[i].worker.join();
 	}
-
-
+	
+	
     return 0;
 
 }
